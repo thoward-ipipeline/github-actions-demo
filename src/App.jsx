@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-  console.log("hello world but enhanced. okay maybe it works this time")
+  console.log(hello world but enhanced.okay maybe it works this time")
 
   return (
     <>
