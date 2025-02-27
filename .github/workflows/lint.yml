@@ -1,0 +1,16 @@
+name: Lint JavaScript Code
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '23'
+      - name: Install dependencies
+        run: npm install
+      - name: Run ESLint
+        run: npm run lint
