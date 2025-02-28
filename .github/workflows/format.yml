@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '23'
       - name: Install Prettier
-        run: npm install prettier
+        run: npm install -g prettier
       - name: Run Prettier
         run: npx prettier --write "**/*.js"
       - name: Commit changes
