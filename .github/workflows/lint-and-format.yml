@@ -1,4 +1,5 @@
-name: Format JavaScript Code
+
+name: Lint and format javascript code
 
 on: [push]
 
@@ -26,3 +27,15 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "style: format files"
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '23'
+      - name: Install dependencies
+        run: npm install
+      - name: Run ESLint
+        run: npm run lint
