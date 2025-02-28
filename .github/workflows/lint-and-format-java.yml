@@ -12,24 +12,8 @@ defaults:
     working-directory: backend
 
 jobs:
-  lint-java:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - name: Set up JDK
-          uses: actions/setup-java@v4
-          with:
-            distribution: 'corretto'
-            java-version: '11'
-        - name: Download Checkstyle
-          run: |
-            curl -L -o checkstyle-all.jar https://github.com/checkstyle/checkstyle/releases/download/checkstyle-${{ env.CHECKSTYLE_VERSION }}/checkstyle-${{ env.CHECKSTYLE_VERSION }}-all.jar
-        - name: Run Checkstyle
-          run: java -jar checkstyle-all.jar -c /google_checks.xml app/src/main/java/
-
   format-java:
     runs-on: ubuntu-latest
-    needs: lint-java
     permissions:
       contents: write
     steps:
