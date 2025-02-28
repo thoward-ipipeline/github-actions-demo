@@ -19,6 +19,7 @@ jobs:
         - name: Set up JDK
           uses: actions/setup-java@v4
           with:
+            distrobution: 'corretto'
             java-version: '8'
         - name: Download Checkstyle
           run: |
@@ -34,6 +35,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
+          distrobution: 'corretto'
           java-version: '8'
       - name: Download Google Java Format
         run: |
