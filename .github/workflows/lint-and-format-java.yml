@@ -1,7 +1,13 @@
 
 name: Lint and format java code
 
-on: [push]
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 defaults:
   run:
