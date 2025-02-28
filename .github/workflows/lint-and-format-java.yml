@@ -36,7 +36,7 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - uses: axel-op/googlejava-format-action@4
+      - uses: axel-op/googlejavaformat-action@v4
         with:
           args: "--aosp --replace"
       - name: Print diffs
