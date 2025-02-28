@@ -1,5 +1,6 @@
 # React + Vite
 [![Lint JavaScript Code](https://github.com/thoward-ipipeline/github-actions-demo/actions/workflows/lint.yml/badge.svg)](https://github.com/thoward-ipipeline/github-actions-demo/actions/workflows/lint.yml)
+[![Format JavaScript Code](https://github.com/thoward-ipipeline/github-actions-demo/actions/workflows/format.yml/badge.svg)](https://github.com/thoward-ipipeline/github-actions-demo/actions/workflows/format.yml)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
