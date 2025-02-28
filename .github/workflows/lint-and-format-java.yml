@@ -36,7 +36,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'corretto'
-          java-version: '8'
+          java-version: '11'
       - name: Download Google Java Format
         run: |
           curl -L -o google-java-format.jar https://github.com/google/google-java-format/releases/download/v${{ env.GOOGLE_JAVA_FORMAT_VERSION }}/google-java-format-${{ env.GOOGLE_JAVA_FORMAT_VERSION }}-all-deps.jar
