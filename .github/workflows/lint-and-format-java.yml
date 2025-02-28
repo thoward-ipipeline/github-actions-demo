@@ -12,6 +12,19 @@ defaults:
     working-directory: backend
 
 jobs:
+  compile-java:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'corretto'
+          java-version: '8'
+      - name: Build with Gradle
+        run: ./gradlew build
+
   format-java:
     runs-on: ubuntu-latest
     permissions:
