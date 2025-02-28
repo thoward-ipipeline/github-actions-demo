@@ -2,6 +2,10 @@ name: Format JavaScript Code
 
 on: [push]
 
+defaults:
+  run:
+    working-directory: frontend
+
 jobs:
   format:
     runs-on: ubuntu-latest

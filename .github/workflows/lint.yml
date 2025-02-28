@@ -2,6 +2,10 @@ name: Lint JavaScript Code
 
 on: [push]
 
+defaults:
+  run:
+    working-directory: frontend
+
 jobs:
   lint:
     runs-on: ubuntu-latest
