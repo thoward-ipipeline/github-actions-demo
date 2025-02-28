@@ -1,5 +1,5 @@
 
-name: Lint and format javascript code
+name: Lint and format code
 
 on: [push]
 
@@ -8,9 +8,9 @@ defaults:
     working-directory: frontend
 
 jobs:
-  format:
+  format-javascript:
     runs-on: ubuntu-latest
-    needs: lint
+    needs: lint-javascript
     permissions:
       contents: write
     steps:
@@ -27,7 +27,7 @@ jobs:
         with:
           commit_message: "Code Style Robot - Automated commit"
 
-  lint:
+  lint-javascript:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
