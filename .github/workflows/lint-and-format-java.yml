@@ -35,5 +35,3 @@ jobs:
       - uses: axel-op/googlejavaformat-action@v4
         with:
           args: "--aosp --replace"
-      - name: Print diffs
-        run: git --no-pager diff --exit-code
