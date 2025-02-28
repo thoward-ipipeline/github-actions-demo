@@ -1,0 +1,20 @@
+name: Format JavaScript Code
+
+on: [push]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '23'
+      - name: Install Prettier
+        run: npm install prettier
+      - name: Run Prettier
+        run: npx prettier --write "**/*.js"
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "style: format files"
