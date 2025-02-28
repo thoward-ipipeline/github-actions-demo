@@ -3,10 +3,6 @@ name: Lint and format java code
 
 on: [push]
 
-env:
-  CHECKSTYLE_VERSION: 10.21.3
-  GOOGLE_JAVA_FORMAT_VERSION: 1.25.2
-
 defaults:
   run:
     working-directory: backend
