@@ -32,11 +32,6 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Set up JDK
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'corretto'
-          java-version: '11'
       - uses: axel-op/googlejavaformat-action@v4
         with:
           args: "--aosp --replace"
