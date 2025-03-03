@@ -5,9 +5,10 @@ on:
   push:
     branches:
       - main
-  pull_request_target:
+  pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 defaults:
   run:
@@ -21,6 +22,9 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          # If there is a pull request, use the incoming branch commit, otherwise, use the triggering commit
+          ref: ${{ github.event.pull_request.head.ref || github.ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: '23'
